@@ -1,60 +1,59 @@
-# Jaime Fernando Nhacumba — Portfólio
+# Template de Portfólio Pessoal
 
-Portfólio pessoal de **Jaime Fernando Nhacumba**, estudante de Engenharia de Tecnologias e Sistemas de Informação e freelancer na área de desenvolvimento de software, em Maputo, Moçambique.
+Um template de portfólio responsivo, feito com HTML, CSS e JavaScript puro. Podes copiar este projecto, adaptar o visual e substituir o conteúdo pelos teus dados para criar e publicar o teu próprio portfólio.
 
-O site reúne apresentação profissional, experiência, projectos, competências, formação e demonstrações interactivas. É uma aplicação estática feita com HTML, CSS e JavaScript, sem dependências de execução ou backend.
+## Começar
 
-## Executar localmente
+Faz um **fork** deste repositório no GitHub ou clona-o para o teu computador:
 
-Não é necessária instalação de pacotes. Na pasta do projecto, inicia um servidor estático:
+```bash
+git clone https://github.com/Jaimelxrd/portfolio.git
+cd portfolio
+```
 
-```powershell
+Para testar localmente, inicia um servidor estático na pasta do projecto:
+
+```bash
 python -m http.server 8000
 ```
 
-Abre [http://localhost:8000](http://localhost:8000) no navegador. Também podes abrir `index.html` directamente, embora um servidor local seja mais adequado para testar os caminhos dos recursos.
+Abre [http://localhost:8000](http://localhost:8000) no navegador. Não é necessário instalar dependências nem configurar um backend.
+
+## Personalizar
+
+1. **Substitui os dados de exemplo** em `js/data.js`: nome, localização, formação, experiências, projectos, competências, contactos e redes sociais. Remove qualquer informação que não queiras publicar.
+2. **Revê os textos e metadados** em `index.html`, incluindo o título da página e a descrição para motores de busca.
+3. **Adiciona as tuas imagens** em `public/images/`. Actualiza os caminhos em `js/data.js` se usares nomes ou pastas diferentes. Podes substituir os SVG de exemplo ou usar os teus próprios ficheiros.
+4. **Ajusta a identidade visual** em `css/style.css`: cores, tipos de letra, espaçamentos e componentes.
+5. **Adapta as interacções** em `js/main.js`, se necessário.
+6. Abre o site localmente e confirma que os textos, ligações e imagens são teus antes de o publicares.
+
+O projecto está disponível para reutilização e adaptação como base para o teu portfólio. Substitui a biografia, fotografias, projectos, contactos e outros dados pessoais do autor original; as informações e imagens de exemplo descrevem o portfólio de Jaime e não representam o teu percurso.
 
 ## Estrutura
 
 ```text
 .
-├── index.html                 # Estrutura e conteúdo principal
+├── index.html                 # Estrutura, textos e metadados da página
 ├── css/
 │   └── style.css              # Estilos, layout e animações
 ├── js/
-│   ├── data.js                # Conteúdo do perfil, projectos e competências
+│   ├── data.js                # Dados do perfil e conteúdo dos projectos
 │   └── main.js                # Navegação e funcionalidades interactivas
-├── public/
-│   └── images/
-│       ├── about-dashboard.svg
-│       ├── profile/           # Retrato e fotografias pessoais
-│       ├── projects/          # Imagens de projectos
-│       ├── experience/        # Imagens de experiência
-│       └── certificates/      # Imagens de certificados
-└── README.md
+└── public/
+    └── images/
+        ├── about-dashboard.svg
+        ├── profile/           # Retrato e fotografias pessoais
+        ├── projects/          # Imagens dos projectos
+        ├── experience/        # Imagens de experiência
+        └── certificates/      # Imagens de certificados
 ```
 
-As pastas de imagens pessoais, experiência e certificados podem estar vazias até adicionares os respectivos ficheiros. Os projectos já incluem ilustrações SVG locais.
+As pastas `profile`, `experience` e `certificates` podem começar vazias. Consulta `public/images/README.md` para orientações sobre os recursos visuais.
 
-## Actualizar o conteúdo
+## Publicar
 
-- **Perfil, experiência, formação, projectos, tecnologias e galeria:** `js/data.js`.
-- **Texto e estrutura das secções:** `index.html`.
-- **Cores, tipografia, responsividade e animações:** `css/style.css`.
-- **Comportamentos e demonstrações interactivas:** `js/main.js`.
-- **Imagens:** `public/images/`; consulta também `public/images/README.md`.
-
-Mantém datas, resultados, clientes e credenciais alinhados com informações que possas confirmar e partilhar.
-
-## Demonstrações
-
-A secção Laboratório contém exemplos interactivos de Java, Python, JavaScript e fluxo de API para interface. São demonstrações executadas no navegador; não dependem de um servidor de API nem executam uma JVM.
-
-As animações respeitam a preferência `prefers-reduced-motion`, e o cursor personalizado é limitado a dispositivos com rato.
-
-## Publicação
-
-O site pode ser publicado em qualquer serviço de alojamento estático. No GitHub Pages, configura a publicação a partir da branch principal e da pasta raiz do repositório.
+Podes publicar o site em qualquer serviço de alojamento estático. Para usar o GitHub Pages, envia o teu projecto para um repositório e selecciona a branch `main` e a pasta raiz nas definições de Pages.
 
 ## Tecnologias
 
