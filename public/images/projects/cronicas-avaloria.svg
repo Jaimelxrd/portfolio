@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Crónicas de Avaloria</title>
+  <desc id="desc">Capa conceptual de um RPG por turnos em Java executado na consola.</desc>
+  <rect width="1200" height="760" fill="#e6e0d2"/>
+  <path d="M0 613 1200 388v372H0Z" fill="#d8cfbc"/>
+  <circle cx="1000" cy="138" r="245" fill="#ded6c6"/>
+  <g transform="rotate(-2 600 380)">
+    <rect x="145" y="107" width="910" height="545" rx="7" fill="#20241f" stroke="#171914" stroke-width="3"/>
+    <path d="M145 165h910" stroke="#44463d" stroke-width="2"/>
+    <circle cx="182" cy="137" r="8" fill="#d97c68"/><circle cx="211" cy="137" r="8" fill="#d5b766"/><circle cx="240" cy="137" r="8" fill="#78a27e"/>
+    <text x="190" y="220" fill="#d4b86d" font-family="monospace" font-size="15" letter-spacing="3">CRÓNICAS DE AVALORIA / JAVA RPG</text>
+    <text x="190" y="282" fill="#f1ead9" font-family="Georgia,serif" font-size="39">A jornada continua.</text>
+    <text x="190" y="323" fill="#b4b5a9" font-family="monospace" font-size="14">BATALHA 03   ·   JOGADOR NÍVEL 4</text>
+    <rect x="190" y="354" width="816" height="192" rx="4" fill="#292d26" stroke="#515247"/>
+    <path d="M598 375v151" stroke="#515247"/>
+    <g font-family="monospace"><text x="220" y="393" fill="#8eb594" font-size="13" letter-spacing="2">AVENTUREIRO</text><text x="220" y="432" fill="#f1ead9" font-size="21">Vida</text><rect x="290" y="416" width="250" height="16" rx="3" fill="#41443b"/><rect x="290" y="416" width="198" height="16" rx="3" fill="#83a978"/><text x="290" y="464" fill="#b4b5a9" font-size="12">ATAQUE  ·  DEFESA  ·  EXPERIÊNCIA</text>
+    <text x="633" y="393" fill="#d58a74" font-size="13" letter-spacing="2">INIMIGO</text><text x="633" y="432" fill="#f1ead9" font-size="21">Guardião das Terras Sombrias</text><rect x="633" y="452" width="330" height="13" rx="3" fill="#41443b"/><rect x="633" y="452" width="234" height="13" rx="3" fill="#bd7667"/><text x="633" y="501" fill="#b4b5a9" font-size="12">O inimigo prepara o próximo turno...</text></g>
+    <text x="190" y="583" fill="#d4b86d" font-family="monospace" font-size="14">[1] ATACAR     [2] DEFENDER     [3] HABILIDADE     [4] ITEM</text>
+    <text x="190" y="620" fill="#7d8176" font-family="monospace" font-size="12">HERANÇA · COMPOSIÇÃO · PROGRESSÃO</text>
+  </g>
+  <path d="m1018 516 28 54h-56Z" fill="#315cff" opacity=".79"/>
+</svg>

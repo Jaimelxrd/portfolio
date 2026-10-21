@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Weather Console Java</title>
+  <desc id="desc">Terminal conceptual que consulta as condições meteorológicas de Maputo.</desc>
+  <rect width="1200" height="760" fill="#dce4e5"/>
+  <path d="M0 606 1200 353v407H0Z" fill="#cbd9dc"/>
+  <circle cx="1016" cy="160" r="222" fill="#d0e0e4"/>
+  <g transform="rotate(-3 600 382)">
+    <rect x="156" y="122" width="880" height="514" rx="7" fill="#182a35" stroke="#102029" stroke-width="3"/>
+    <path d="M156 177h880" stroke="#334853" stroke-width="2"/>
+    <circle cx="194" cy="150" r="8" fill="#ff8c75"/><circle cx="223" cy="150" r="8" fill="#eec56c"/><circle cx="252" cy="150" r="8" fill="#7ac9a8"/>
+    <text x="191" y="229" fill="#80b8ce" font-family="monospace" font-size="17" letter-spacing="3">WEATHER CONSOLE / JAVA</text>
+    <text x="191" y="284" fill="#eef2ed" font-family="monospace" font-size="24">$ weather --city "Maputo"</text>
+    <text x="191" y="326" fill="#93a6a8" font-family="monospace" font-size="16">geocoding city...</text>
+    <text x="191" y="360" fill="#75d3ad" font-family="monospace" font-size="16">✓ coordinates found  -25.97, 32.58</text>
+    <path d="M191 388h777" stroke="#334853" stroke-width="2"/>
+    <text x="191" y="433" fill="#93a6a8" font-family="monospace" font-size="15" letter-spacing="2">MAPUTO · MOZAMBIQUE</text>
+    <text x="188" y="531" fill="#f3f4e9" font-family="Arial,sans-serif" font-size="92" font-weight="300">26°</text>
+    <text x="193" y="570" fill="#8bc1d0" font-family="monospace" font-size="15">PARTLY CLOUDY</text>
+    <g transform="translate(564 458)" fill="none" stroke="#f0c775" stroke-width="7" stroke-linecap="round"><circle cx="61" cy="50" r="25" fill="#f0c775"/><path d="M61 2v-14M61 112v-14M13 50H0m122 0h-14M27 16l-10-10m88 88-10-10m0-68 10-10m-88 88-10 10"/></g>
+    <g font-family="monospace" font-size="14" fill="#eef2ed"><text x="728" y="484">HUMIDITY</text><text x="728" y="515" fill="#8bc1d0" font-size="20">68%</text><text x="846" y="484">WIND</text><text x="846" y="515" fill="#8bc1d0" font-size="20">12 km/h</text></g>
+    <text x="191" y="608" fill="#64777d" font-family="monospace" font-size="12">OPEN-METEO · HTTPCLIENT · JACKSON</text>
+  </g>
+</svg>

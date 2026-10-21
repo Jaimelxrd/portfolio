@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">PiSolver</title>
+  <desc id="desc">Ilustração de uma ferramenta matemática com expressão e gráfico interactivo.</desc>
+  <rect width="1200" height="760" fill="#e5e1d8"/>
+  <path d="M0 628 1200 406v354H0Z" fill="#d9d5cb"/>
+  <circle cx="980" cy="190" r="280" fill="#dcd9d0"/>
+  <g transform="rotate(3 610 385)">
+    <rect x="176" y="102" width="730" height="558" rx="8" fill="#fbfaf7" stroke="#171717" stroke-width="2"/>
+    <path d="M176 166h730" stroke="#d6d2c9" stroke-width="2"/>
+    <circle cx="211" cy="134" r="8" fill="#315cff"/><circle cx="240" cy="134" r="8" fill="#c9c6bf"/><circle cx="269" cy="134" r="8" fill="#c9c6bf"/>
+    <text x="217" y="220" fill="#315cff" font-family="monospace" font-size="16" letter-spacing="3">PISOLVER / GRAPH</text>
+    <text x="217" y="293" fill="#171717" font-family="Georgia,serif" font-size="54">f(x) = x² − 4</text>
+    <rect x="216" y="321" width="650" height="280" fill="#f4f2ec"/>
+    <g stroke="#dedbd4" stroke-width="1"><path d="M260 348v223M330 348v223M400 348v223M470 348v223M540 348v223M610 348v223M680 348v223M750 348v223M820 348v223M246 376h600M246 432h600M246 488h600M246 544h600"/></g>
+    <path d="M246 488h600M540 348v223" fill="none" stroke="#77736c" stroke-width="2"/>
+    <path d="M270 374 C352 534 414 570 478 539 C523 518 529 488 540 486 C552 484 562 450 608 423 C672 386 742 405 822 554" fill="none" stroke="#315cff" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="399" cy="526" r="8" fill="#315cff"/><circle cx="682" cy="393" r="8" fill="#315cff"/>
+    <text x="219" y="634" fill="#77736c" font-family="monospace" font-size="13" letter-spacing="2">EQUAÇÃO · CÁLCULO · VISUALIZAÇÃO</text>
+  </g>
+  <g fill="#315cff" font-family="Georgia,serif" opacity=".76"><text x="968" y="310" font-size="74">π</text><text x="1021" y="594" font-size="35">∑</text><text x="118" y="558" font-size="30">√x</text></g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Gestão de Xitiques</title>
+  <desc id="desc">Ilustração conceptual de um grupo a organizar contribuições para uma poupança comunitária.</desc>
+  <rect width="1200" height="760" fill="#e8e2d5"/>
+  <path d="M0 596 1200 353v407H0Z" fill="#ddd5c5"/>
+  <circle cx="980" cy="116" r="240" fill="#e2dbc9"/>
+  <g transform="rotate(-3 600 380)">
+    <rect x="154" y="111" width="892" height="534" rx="8" fill="#f9f7f0" stroke="#171717" stroke-width="2"/>
+    <path d="M154 174h892" stroke="#d8d3c8" stroke-width="2"/>
+    <circle cx="190" cy="142" r="8" fill="#315cff"/><circle cx="219" cy="142" r="8" fill="#c9c6bf"/><circle cx="248" cy="142" r="8" fill="#c9c6bf"/>
+    <text x="200" y="231" fill="#315cff" font-family="monospace" font-size="16" letter-spacing="3">XITIQUE / GRUPO 04</text>
+    <text x="200" y="286" fill="#171717" font-family="Arial,sans-serif" font-size="40" font-weight="600">Poupamos em conjunto.</text>
+    <text x="200" y="322" fill="#77736c" font-family="monospace" font-size="13" letter-spacing="1">CONCEITO · GRUPO DE POUPANÇA COMUNITÁRIA</text>
+    <circle cx="463" cy="480" r="122" fill="none" stroke="#e2dfd7" stroke-width="24"/>
+    <circle cx="463" cy="480" r="122" fill="none" stroke="#315cff" stroke-width="24" stroke-dasharray="570 766" stroke-linecap="round" transform="rotate(-90 463 480)"/>
+    <text x="463" y="470" text-anchor="middle" fill="#77736c" font-family="monospace" font-size="13" letter-spacing="2">GESTÃO</text>
+    <text x="463" y="514" text-anchor="middle" fill="#171717" font-family="Arial,sans-serif" font-size="30" font-weight="600">COLECTIVA</text>
+    <g font-family="monospace" fill="#555" font-size="15"><text x="690" y="405">01  Registar contribuições</text><text x="690" y="461">02  Organizar participantes</text><text x="690" y="517">03  Acompanhar turnos</text></g>
+    <g fill="#74a886"><circle cx="659" cy="400" r="7"/><circle cx="659" cy="456" r="7"/></g><circle cx="659" cy="512" r="7" fill="#74a886"/>
+    <path d="M688 426h267M688 482h267M688 538h267" stroke="#e0ddd5" stroke-width="2"/>
+    <rect x="690" y="562" width="266" height="40" rx="3" fill="#e7ecdf"/><text x="708" y="587" fill="#46604a" font-family="monospace" font-size="12">IDEIA EM DESENVOLVIMENTO</text>
+  </g>
+  <g fill="#ba8655" opacity=".8"><circle cx="102" cy="454" r="14"/><circle cx="1100" cy="540" r="9"/><circle cx="1030" cy="615" r="6"/></g>
+</svg>

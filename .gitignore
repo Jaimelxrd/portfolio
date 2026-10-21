@@ -1,0 +1,13 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Dependências e resultados de build (caso sejam adicionados no futuro)
+node_modules/
+dist/
+coverage/
+
+# Ficheiros locais do editor
+.vscode/
+.idea/
