@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#F4F1EA" />
+    <meta name="theme-color" content="#040B22" />
     <meta name="description" content="Jaime Fernando Nhacumba — freelancer e estudante de Engenharia de Software em Maputo." />
     <title>Jaime Fernando Nhacumba — Software &amp; sistemas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -18,7 +18,7 @@
       <a class="wordmark" href="#top" aria-label="Jaime Nhacumba, início">JN<span>.</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir navegação"><span></span><span></span></button>
       <nav class="primary-nav" id="primary-navigation" aria-label="Navegação principal">
-        <a href="#sobre">Perfil</a><a href="#experiencia">Experiência</a><a href="#projetos">Projectos</a><a href="#laboratorio">Laboratório</a><a href="#formacao">Formação</a><a class="nav-contact" href="#contacto">Contacto ↗</a>
+        <a href="#sobre">Perfil</a><a href="#experiencia">Experiência</a><a href="#projetos">Projectos</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#laboratorio">Laboratório</a><a class="nav-contact" href="#contacto">Contacto ↗</a>
       </nav>
     </header>
 
@@ -49,6 +49,19 @@
           <h2 id="about-title" class="editorial-heading">Software é<br />uma forma de<br /><em>resolver.</em></h2>
           <div class="about-copy"><p class="about-lead">Há vários anos trabalho como freelancer, desenvolvendo software e explorando ideias para outras pessoas, para além dos projectos que inicio por conta própria.</p><p>O meu trabalho começa por perceber quem precisa da solução e porquê. A partir daí, ajudo a clarificar requisitos, desenho uma abordagem técnica e acompanho a implementação até à entrega. Cada projecto tem o seu contexto; procuro que as decisões de código respondam a esse contexto.</p><p>Actualmente frequento o terceiro ano de Engenharia de Tecnologias e Sistemas de Informação na Universidade Joaquim Chissano, com especialização em Engenharia de Software.</p><div class="about-facts"><div><span>BASE</span><strong>Maputo, Moçambique</strong></div><div><span>FORMAÇÃO</span><strong>Universidade Joaquim Chissano</strong></div><div><span>FOCO</span><strong>Engenharia de Software</strong></div></div></div>
         </div>
+        <div class="ambitions" aria-labelledby="ambitions-title">
+          <div class="ambitions-heading">
+            <p class="eyebrow">DIRECÇÃO PROFISSIONAL</p>
+            <h3 id="ambitions-title">Crescer com<br /><em>propósito.</em></h3>
+            <p>Quero tornar-me um programador de alto nível e continuar a evoluir na criação de aplicações profissionais.</p>
+          </div>
+          <div class="ambition-list">
+            <article class="ambition-item"><span>01</span><div><h4>Aprender com método</h4><p>Avançar dos fundamentos aos conceitos mais exigentes e transformar esse conhecimento em aplicações profissionais.</p></div></article>
+            <article class="ambition-item"><span>02</span><div><h4>Empreender com software</h4><p>Explorar oportunidades de negócio que possam começar com poucos recursos e crescer ao longo do tempo.</p></div></article>
+            <article class="ambition-item"><span>03</span><div><h4>Criar soluções locais</h4><p>Trabalhar em necessidades de educação, gestão, comércio electrónico e participação cívica no contexto moçambicano.</p></div></article>
+            <article class="ambition-item"><span>04</span><div><h4>Explorar novas áreas</h4><p>Continuar a aprender sobre automação, inteligência artificial, aprendizagem automática e desenvolvimento de jogos.</p></div></article>
+          </div>
+        </div>
         <div class="java-build" aria-labelledby="java-build-title">
           <div class="java-build-heading"><span id="java-build-title">IDEIA → CÓDIGO / JAVA</span><span class="java-build-status"><i></i> A CONSTRUIR</span></div>
           <div class="java-build-stage">
@@ -71,7 +84,8 @@
 
       <section class="projects section-shell section-pad" id="projetos" aria-labelledby="projects-title">
         <div class="section-kicker"><span>03</span><i></i><span>PROJECTOS SELECCIONADOS</span></div>
-        <div class="projects-heading"><h2 id="projects-title" class="editorial-heading">Trabalho em<br /><em>contexto.</em></h2><p>Repositórios e explorações em diferentes estados. Abre um projecto para ver o problema, a abordagem e os limites conhecidos.</p></div>
+        <div class="projects-heading"><h2 id="projects-title" class="editorial-heading">Trabalho em<br /><em>contexto.</em></h2><p>Repositórios e explorações em diferentes estados. Filtra por estado e abre um projecto para ver o problema, a abordagem e os limites conhecidos.</p></div>
+        <div class="project-filter" id="project-filter" role="group" aria-label="Filtrar projectos por estado"></div>
         <div class="project-gallery" id="project-gallery" aria-live="polite"></div>
         <div class="project-ideas"><div><span class="eyebrow">A SEGUIR NO CADERNO</span><h3>Ideias a ganhar<br />forma.</h3></div><div id="exploration-list" class="exploration-list"></div></div>
       </section>
@@ -81,9 +95,20 @@
         <div class="capabilities-grid"><h2 id="skills-title" class="editorial-heading">Escolhidas pelo<br /><em>problema.</em></h2><div><p class="capability-intro">Organizo as tecnologias pelo trabalho que ajudam a fazer e ligo-as aos projectos onde há contexto confirmado.</p><div id="skill-groups" class="skill-groups"></div></div></div>
       </section>
 
+      <section class="education section-shell section-pad" id="formacao" aria-labelledby="education-title">
+        <div class="section-kicker"><span>05</span><i></i><span>FORMAÇÃO</span></div>
+        <div class="education-grid"><div><p class="eyebrow">PERCURSO ACADÉMICO</p><h2 id="education-title" class="editorial-heading">Aprender<br /><em>por camadas.</em></h2></div><div id="education-list" class="education-list"></div></div>
+        <div class="certifications" id="certificacoes"><div class="certification-heading"><div><p class="eyebrow">FORMAÇÃO COMPLEMENTAR</p><h3>Certificações<br />&amp; cursos.</h3></div><span id="certificate-count">0 REGISTOS</span></div><div id="certificate-list" class="certificate-list" aria-live="polite"></div><p class="certificate-note">Abre a imagem de um certificado para a ampliar ou usa o link para consultar os documentos em PDF.</p></div>
+      </section>
+
+      <section class="process section-shell section-pad" id="processo" aria-labelledby="process-title">
+        <div class="section-kicker"><span>06</span><i></i><span>COMO TRABALHO</span></div>
+        <div class="process-grid"><div class="process-heading"><h2 id="process-title" class="editorial-heading">Da pergunta<br />à <em>entrega.</em></h2><p>Um mapa de trabalho que adapto ao contexto. O diagrama é uma demonstração visual do fluxo, não uma afirmação sobre uma metodologia certificada.</p><span class="process-live"><i></i> <b id="process-current">01</b> / 05</span></div><div class="process-flow" id="process-flow"></div></div>
+      </section>
+
       <section class="laboratory section-shell section-pad" id="laboratorio" aria-labelledby="lab-title">
-        <div class="section-kicker"><span>05</span><i></i><span>LABORATÓRIO INTERACTIVO</span></div>
-        <div class="lab-heading"><h2 id="lab-title" class="editorial-heading">Código em<br /><em>movimento.</em></h2><p>Cinco pequenas leituras de sistemas: um trecho Java revelado linha a linha, uma ordenação visual, uma transformação interactiva e o percurso de um dado até à interface.</p></div>
+        <div class="section-kicker"><span>07</span><i></i><span>LABORATÓRIO INTERACTIVO</span></div>
+        <div class="lab-heading"><h2 id="lab-title" class="editorial-heading">Código em<br /><em>movimento.</em></h2><p>Quatro pequenas leituras de sistemas: um trecho Java revelado linha a linha, uma ordenação visual, uma transformação interactiva e o percurso de um dado até à interface.</p></div>
         <div class="lab-tabs" role="tablist" aria-label="Demonstrações do laboratório">
           <button id="tab-java" role="tab" aria-selected="true" aria-controls="lab-panel" data-lab="java">01 <span>Java</span></button><button id="tab-python" role="tab" aria-selected="false" aria-controls="lab-panel" data-lab="python">02 <span>Python</span></button><button id="tab-javascript" role="tab" aria-selected="false" aria-controls="lab-panel" data-lab="javascript">03 <span>JavaScript</span></button><button id="tab-api" role="tab" aria-selected="false" aria-controls="lab-panel" data-lab="api">04 <span>API → UI</span></button>
         </div>
@@ -105,22 +130,26 @@
         </div>
       </section>
 
-      <section class="education section-shell section-pad" id="formacao" aria-labelledby="education-title">
-        <div class="section-kicker"><span>06</span><i></i><span>FORMAÇÃO</span></div>
-        <div class="education-grid"><div><p class="eyebrow">PERCURSO ACADÉMICO</p><h2 id="education-title" class="editorial-heading">Aprender<br /><em>por camadas.</em></h2></div><div id="education-list" class="education-list"></div></div>
-        <div class="certifications" id="certificacoes"><div class="certification-heading"><div><p class="eyebrow">FORMAÇÃO COMPLEMENTAR</p><h3>Certificações<br />&amp; cursos.</h3></div><span id="certificate-count">0 REGISTOS</span></div><div id="certificate-list" class="certificate-list" aria-live="polite"></div><p class="certificate-note">Sem credenciais publicadas nesta versão. Os registos só aparecem aqui quando os dados e, quando aplicável, a verificação forem fornecidos.</p></div>
-      </section>
-
-      <section class="process section-shell section-pad" id="processo" aria-labelledby="process-title">
-        <div class="section-kicker"><span>07</span><i></i><span>COMO TRABALHO</span></div>
-        <div class="process-grid"><div class="process-heading"><h2 id="process-title" class="editorial-heading">Da pergunta<br />à <em>entrega.</em></h2><p>Um mapa de trabalho que adapto ao contexto. O diagrama é uma demonstração visual do fluxo, não uma afirmação sobre uma metodologia certificada.</p><span class="process-live"><i></i> <b id="process-current">01</b> / 05</span></div><div class="process-flow" id="process-flow"></div></div>
-      </section>
-
       <section class="presence section-shell section-pad" id="presenca" aria-labelledby="presence-title">
         <div class="section-kicker"><span>08</span><i></i><span>CÓDIGO ABERTO</span></div><div class="presence-row"><h2 id="presence-title" class="editorial-heading">O código<br />fica <em>aberto.</em></h2><div><p>Explora repositórios e acompanha as experiências em curso. O estado de cada projecto está descrito com o contexto disponível.</p><a class="text-arrow" href="https://github.com/Jaimelxrd" target="_blank" rel="noopener noreferrer">github.com/Jaimelxrd <span>↗</span></a></div></div><div id="repo-strip" class="repo-strip"></div>
       </section>
 
-      <section class="contact section-shell" id="contacto" aria-labelledby="contact-title"><div class="contact-index">09 — CONTACTO</div><div class="contact-content"><p class="eyebrow">PROJECTOS · OPORTUNIDADES · COLABORAÇÃO</p><h2 id="contact-title">Vamos falar<br />do que <em>falta.</em></h2><p>Se tens um problema que precisa de uma solução de software, ou queres conversar sobre uma oportunidade, encontra-me no GitHub.</p><a class="contact-button" href="https://github.com/Jaimelxrd" target="_blank" rel="noopener noreferrer">Abrir perfil GitHub <span>↗</span></a></div><div class="contact-footer"><a class="wordmark" href="#top">JN<span>.</span></a><span>JAIME FERNANDO NHACUMBA · MAPUTO, MOÇAMBIQUE</span><span>© <span id="current-year"></span></span></div></section>
+      <section class="contact section-shell" id="contacto" aria-labelledby="contact-title">
+        <div class="contact-index">09 &#8212; CONTACTO</div>
+        <div class="contact-content">
+          <p class="eyebrow">PROJECTOS &#183; OPORTUNIDADES &#183; COLABORA&Ccedil;&Atilde;O</p>
+          <h2 id="contact-title">Vamos falar<br />do que <em>falta.</em></h2>
+          <p>Se queres conversar sobre um projecto, uma oportunidade ou uma colabora&ccedil;&atilde;o, escolhe o canal mais conveniente.</p>
+          <div class="contact-methods" aria-label="Canais de contacto">
+            <a href="mailto:jaimenhacumba@gmail.com"><span>Email</span><strong>jaimenhacumba@gmail.com &#8599;</strong></a>
+            <a href="https://wa.me/258847852208" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><strong>+258 84 785 2208 &#8599;</strong></a>
+            <a href="tel:+258847852208"><span>Chamadas</span><strong>+258 84 785 2208 &#8599;</strong></a>
+            <a href="sms:+258847852208"><span>SMS</span><strong>+258 84 785 2208 &#8599;</strong></a>
+          </div>
+          <a class="contact-button" href="https://github.com/Jaimelxrd" target="_blank" rel="noopener noreferrer">Abrir perfil GitHub <span>&#8599;</span></a>
+        </div>
+        <div class="contact-footer"><a class="wordmark" href="#top">JN<span>.</span></a><span>JAIME FERNANDO NHACUMBA &#183; MAPUTO, MO&Ccedil;AMBIQUE</span><span>&#169; <span id="current-year"></span></span></div>
+      </section>
     </main>
     <div class="custom-cursor" aria-hidden="true"><span></span></div>
     <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Fechar detalhes">×</button><div id="dialog-content"></div></dialog>

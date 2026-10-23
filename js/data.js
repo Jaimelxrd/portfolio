@@ -8,31 +8,31 @@ window.PORTFOLIO_DATA = {
     year: 'Terceiro ano',
     specialization: 'Engenharia de Software',
     assets: {
-      portrait: 'public/images/profile/jaime.jpg',
+      portrait: 'public/images/profile/jaime.png',
       portraitCaption: 'JAIME FERNANDO NHACUMBA',
       personalGallery: [
         { src: 'public/images/profile/percurso.jpg', alt: 'Jaime durante o seu percurso académico', caption: 'PERCURSO' },
-        { src: 'public/images/profile/trabalho.jpg', alt: 'Jaime num contexto de trabalho', caption: 'PROCESSO' }
+        { src: 'public/images/profile/img2.jpg', alt: 'Jaime a programar ao computador', caption: 'PROCESSO' }
       ],
       projectImages: {
-        pisolver: 'public/images/projects/pisolver.svg',
-        weather: 'public/images/projects/weather-console.svg',
+        pisolver: 'public/images/projects/Screenshot 2026-10-23 124905.png',
+        weather: 'public/images/projects/Interface de Terminal Java Weather App.png',
         study: 'public/images/projects/assistente-estudos.svg',
-        explicamoz: 'public/images/projects/explicamoz.svg',
-        xitique: 'public/images/projects/xitique.svg',
-        rpg: 'public/images/projects/cronicas-avaloria.svg',
-        meuportfolio: 'public/images/projects/meuportfolio-desktop.svg'
+        explicamoz: 'public/images/projects/optimized-explicamoz.jpg',
+        rpg: 'public/images/projects/optimized-rpg.jpg',
+        ecommerce: 'public/images/projects/optimized-ecommerce.jpg',
+        'matriculas-mensalidades': 'public/images/projects/optimized-kindergarten.jpg',
+        meuportfolio: 'public/images/projects/optimized-meuportfolio.jpg'
       }
     }
   },
   experiences: [
     {
-      type: 'software', organization: 'Trabalho independente', role: 'Freelancer — desenvolvimento de software',
+      type: 'software', organization: 'Trabalho independente', role: 'Freelancer - desenvolvimento de software',
       start: null, end: null,
       description: 'Desenvolvimento de projectos e ideias para outras pessoas, além de projectos próprios. A participação pode abranger análise de necessidades, clarificação de requisitos, desenho da solução, implementação e entrega.',
       responsibilities: ['Analisar o contexto e as necessidades apresentadas', 'Definir uma abordagem técnica adequada ao problema', 'Implementar, rever e preparar a entrega do software'],
       technologies: [], relatedProjects: [], results: [],
-      note: 'Datas, clientes, responsabilidades específicas, tecnologias e resultados devem ser acrescentados por projecto quando puderem ser partilhados.'
     }
   ],
   teaching: {
@@ -49,9 +49,24 @@ window.PORTFOLIO_DATA = {
       status: 'Em curso'
     }
   ],
-  // Registos: { name, issuer, date, credentialId, verificationUrl, image, description, skills: [] }.
-  // Manter vazio até haver dados reais de certificados ou cursos concluídos.
-  certifications: [],
+  // Registos: { name, issuer, date, credentialId, verificationUrl, image, file, description, skills: [] }.
+  certifications: [
+    {
+      name: 'Java Development', issuer: 'FIAP · Nano Courses', date: '26 de setembro de 2026 · 60 horas',
+      credentialId: '5EC3A1E4A72AAB9013D307E9FBB82D73',
+      verificationUrl: 'https://on.fiap.com.br/validar-certificado/',
+      image: 'public/images/certificates/5ec3a1e4a72aab9013d307e9fbb82d73.png'
+    },
+    {
+      name: 'Python Development', issuer: 'FIAP · Nano Courses', date: '2 de julho de 2025 · 80 horas',
+      credentialId: 'dcceb23e9181295d65a03f316e7cc48e',
+      verificationUrl: 'https://on.fiap.com.br/local/nanocourses/validar-certificado',
+      image: 'public/images/certificates/dcceb23e9181295d65a03f316e7cc48e.png'
+    },
+    { name: 'Certificado.pdf', issuer: 'Ficheiro fornecido', file: 'public/images/certificates/Certificado.pdf' },
+    { name: 'doc.pdf', issuer: 'Ficheiro fornecido', file: 'public/images/certificates/doc.pdf' },
+    { name: 'TJSN2OUK.pdf', issuer: 'Ficheiro fornecido', file: 'public/images/certificates/TJSN2OUK.pdf' }
+  ],
   featuredProjects: [
     {
       id: 'explicamoz', name: 'ExplicaMoz', category: 'EDUCAÇÃO · API', status: 'API em desenvolvimento', statusTone: 'status-progress',
@@ -80,7 +95,7 @@ window.PORTFOLIO_DATA = {
       technologies: ['HTML', 'CSS', 'JavaScript', 'Math.js', 'Plotly'],
       challenges: 'A descrição do projecto foi inferida a partir da interface e do código público; não há documentação formal de resultados.',
       implementation: 'Código disponível publicamente. O repositório não documenta utilizadores, métricas nem um lançamento de produção.',
-      results: [], repo: 'PiSolver', visual: 'math', layout: 'large',
+      results: [], repo: 'PiSolver', visual: 'math', layout: 'normal',
       visualLabel: 'INTERFACE MATEMÁTICA / WEB'
     },
     {
@@ -99,6 +114,22 @@ window.PORTFOLIO_DATA = {
       visualLabel: 'CIDADE → COORDENADAS → PREVISÃO'
     },
     {
+      id: 'ecommerce', name: 'Sistema de comércio electrónico · +lxrd', category: 'JAVA · SPRING BOOT', status: 'Projecto para cliente', statusTone: 'status-client',
+      summary: 'Loja online +lxrd com catálogo, pesquisa, carrinho e encomendas pelo WhatsApp, apoiada por um backend Java.',
+      context: 'Projecto desenvolvido para outra pessoa, com trabalho no backend de uma loja online e numa interface web para +lxrd.',
+      problem: 'Reunir a gestão de produtos e o processo de encomenda numa experiência de compra online.',
+      objective: 'Construir uma base de e-commerce com autenticação e gestão de produtos, acompanhada por uma loja com categorias, pesquisa e carrinho.',
+      contribution: 'Desenvolvi o backend em Java e Spring Boot, a API de autenticação e gestão de produtos, e trabalhei na loja web +lxrd. O backend foi publicado no Railway.',
+      approach: 'API REST para autenticação e operações CRUD de produtos; a loja oferece categorias, pesquisa, carrinho guardado em localStorage e finalização pelo WhatsApp.',
+      architecture: 'Backend em Java, Spring Boot, Spring Data JPA e PostgreSQL, com Spring Security e BCrypt. Foram preparados perfis de configuração para diferentes ambientes. A loja +lxrd usa páginas web e localStorage para o carrinho.',
+      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Spring Data JPA', 'Spring Security', 'BCrypt', 'HTML', 'CSS', 'JavaScript', 'localStorage', 'Railway'],
+      challenges: 'O trabalho abrangeu autenticação, gestão de produtos e configuração do backend para diferentes ambientes. Resultados de utilização não foram especificados.',
+      implementation: 'Backend publicado no Railway. A loja +lxrd inclui páginas web, categorias, pesquisa, gestão de produtos, carrinho em localStorage e encaminhamento de encomendas pelo WhatsApp.',
+      results: ['Backend publicado no Railway', 'Loja com catálogo, categorias e pesquisa', 'Carrinho e finalização de encomendas pelo WhatsApp'],
+      repo: '', visual: 'commerce', layout: 'wide',
+      visualLabel: 'LOJA +LXRd / JAVA · SPRING BOOT'
+    },
+    {
       id: 'study', name: 'Assistente de Estudos', category: 'JAVA · IA · JDBC', status: 'Em desenvolvimento', statusTone: 'status-progress',
       summary: 'Aplicação de consola para organizar projectos de estudo e guardar planos gerados com Gemini em MySQL.',
       context: 'Ferramenta de apoio à organização de estudos e prazos.',
@@ -114,16 +145,16 @@ window.PORTFOLIO_DATA = {
       visualLabel: 'PROJECTOS DE ESTUDO / MYSQL'
     },
     {
-      id: 'xitique', name: 'Plataforma de Gestão de Xitiques', category: 'GESTÃO · EXPLORAÇÃO', status: 'Parcial', statusTone: 'status-idea',
-      summary: 'Projecto parcialmente desenvolvido para apoiar a organização de grupos de poupança.',
-      context: 'A ideia parte da gestão de grupos de poupança conhecidos como xitiques.',
-      problem: 'Organizar a participação e a informação do grupo num processo mais claro.',
-      objective: 'Explorar uma plataforma de apoio à gestão de xitiques.',
-      contribution: 'O projecto foi indicado como parcialmente desenvolvido. Não há repositório ou registo de responsabilidades específicas confirmados.',
+      id: 'matriculas-mensalidades', name: 'Kindergarten', category: 'EDUCA\u00c7\u00c3O \u00b7 GEST\u00c3O', status: 'Projecto no GitHub', statusTone: 'status-live',
+      summary: 'Sistema de gest\u00e3o para um jardim de inf\u00e2ncia, com foco em matr\u00edculas e mensalidades. O projecto procura reunir estes processos e facilitar o acompanhamento dos registos e pagamentos.',
+      context: 'O sistema est\u00e1 orientado \u00e0 rotina administrativa de um jardim de inf\u00e2ncia, com foco nos processos de matr\u00edcula das crian\u00e7as e no controlo das mensalidades.',
+      problem: 'Apoiar a organiza\u00e7\u00e3o das matr\u00edculas e manter o acompanhamento das mensalidades associado aos registos escolares.',
+      objective: 'Desenvolver um sistema de apoio \u00e0 gest\u00e3o de matr\u00edculas e mensalidades do jardim de inf\u00e2ncia.',
+      contribution: 'Projecto pessoal com c\u00f3digo publicado no GitHub, dedicado aos processos administrativos de matr\u00edcula e cobran\u00e7a de mensalidades.',
       approach: '', architecture: '', technologies: [], challenges: '',
-      implementation: 'Parcial. Tecnologias, integrações com M-Pesa ou e-Mola, demonstração e resultados ainda não foram confirmados.',
-      results: [], repo: '', visual: 'code', layout: 'wide',
-      visualLabel: 'GESTÃO DE GRUPOS / EM DESENVOLVIMENTO'
+      implementation: 'O reposit\u00f3rio est\u00e1 dispon\u00edvel no GitHub e apresenta o escopo do sistema de matr\u00edculas e mensalidades para um jardim de inf\u00e2ncia.',
+      results: [], repo: 'Matriculas_e_Mensalidades_de_Jardim_de_Infancia', visual: 'education', layout: 'wide',
+      visualLabel: 'MATR\u00cdCULAS / MENSALIDADES'
     },
     {
       id: 'rpg', name: 'Crónicas de Avaloria', category: 'JAVA · RPG POR TURNOS', status: 'Implementação pública', statusTone: 'status-live',
@@ -157,19 +188,21 @@ window.PORTFOLIO_DATA = {
     }
   ],
   explorations: [
-    { number: '01', title: 'Gestão de Xitiques', category: 'IDEIA EM DESENVOLVIMENTO', status: 'Parcial', description: 'Plataforma para apoiar a gestão de grupos de poupança. Integrações de pagamento não confirmadas.' },
-    { number: '02', title: 'Assistente de atendimento e vendas', category: 'CONCEITO', status: 'Em exploração', description: 'Conceito de assistente para apoiar interacções de atendimento e tarefas de venda.' },
-    { number: '03', title: 'Aulas de programação online', category: 'CONCEITO', status: 'Em definição', description: 'Ideia de plataforma para aulas de programação. Pagamentos e vídeo ainda não são funcionalidades confirmadas.' }
+    { number: '01', title: 'Sistema de gest\u00e3o de escolas de condu\u00e7\u00e3o', category: 'PROJECTO ACAD\u00c9MICO \u00b7 EM DESENVOLVIMENTO', status: 'Iniciado', description: 'Digitaliza os processos administrativos e pedag\u00f3gicos das escolas de condu\u00e7\u00e3o em Maputo, hoje dispersos entre papel, folhas de presen\u00e7a manuscritas e ficheiros Excel. O escopo especificado inclui estudantes e documentos, pagamentos e d\u00edvidas, aulas te\u00f3ricas e pr\u00e1ticas, instrutores, ve\u00edculos, hor\u00e1rios sem conflitos, testes e resultados, requisitos do INATRO e perfis de acesso com permiss\u00f5es.' },
+    { number: '02', title: 'Plataforma de participa\u00e7\u00e3o c\u00edvica rural', category: 'PROPOSTA \u00b7 CONCEITO', status: 'Em defini\u00e7\u00e3o', description: 'Proposta para a participa\u00e7\u00e3o de comunidades rurais em processos c\u00edvicos atrav\u00e9s de SMS e USSD, com gateway de operadora, processamento de propostas e votos, registo numa base de dados e confirma\u00e7\u00f5es em l\u00ednguas locais. Considera telefones b\u00e1sicos, conectividade limitada, diversidade lingu\u00edstica e o acesso \u00e0s comunidades rurais de Mo\u00e7ambique.' },
+    { number: '03', title: 'Gest\u00e3o de Xitiques', category: 'IDEIA DE NEG\u00d3CIO', status: 'Em explora\u00e7\u00e3o', description: 'Ideia de neg\u00f3cio para apoiar a gest\u00e3o de grupos de poupan\u00e7a conhecidos como xitiques. Ainda n\u00e3o apresentada como projecto implementado.' },
+    { number: '04', title: 'Assistente de atendimento e vendas', category: 'CONCEITO', status: 'Em explora\u00e7\u00e3o', description: 'Conceito de assistente para apoiar intera\u00e7\u00f5es de atendimento e tarefas de venda.' },
+    { number: '05', title: 'Aulas de programa\u00e7\u00e3o online', category: 'CONCEITO', status: 'Em defini\u00e7\u00e3o', description: 'Ideia de plataforma para aulas de programa\u00e7\u00e3o. Pagamentos e v\u00eddeo ainda n\u00e3o s\u00e3o funcionalidades confirmadas.' }
   ],
   skills: [
     { category: 'LINGUAGENS', items: [
       { name: 'Java', project: 'weather-console-java' }, { name: 'Python' }, { name: 'PHP' }, { name: 'JavaScript', project: 'PiSolver' }, { name: 'HTML & CSS', project: 'PiSolver' }, { name: 'Flex' }
     ] },
     { category: 'APLICAÇÕES E SERVIÇOS', items: [
-      { name: 'Spring Boot', project: 'ExplicaMoz' }, { name: 'Django' }, { name: 'React' }, { name: 'APIs REST', project: 'ExplicaMoz' }, { name: 'Integração com IA', project: 'AI-Study-Manager' }
+      { name: 'Spring Boot', project: 'ExplicaMoz' }, { name: 'Django' }, { name: 'Flask' }, { name: 'FastAPI' }, { name: 'React' }, { name: 'APIs REST', project: 'ExplicaMoz' }, { name: 'Integração com IA', project: 'AI-Study-Manager' }
     ] },
     { category: 'DADOS E FERRAMENTAS', items: [
-      { name: 'PostgreSQL', project: 'ExplicaMoz' }, { name: 'JDBC', project: 'AI-Study-Manager' }, { name: 'MySQL', project: 'AI-Study-Manager' }, { name: 'SQLAlchemy' }, { name: 'Git & GitHub' }
+      { name: 'PostgreSQL', project: 'ExplicaMoz' }, { name: 'SQLite' }, { name: 'JDBC', project: 'AI-Study-Manager' }, { name: 'MySQL', project: 'AI-Study-Manager' }, { name: 'SQLAlchemy' }, { name: 'Git & GitHub' }
     ] }
   ],
   repositories: ['ExplicaMoz', 'PiSolver', 'weather-console-java', 'AI-Study-Manager', 'Jogo-RPG-1', 'MeuPortfolio'],

@@ -93,12 +93,12 @@
     }
 
     function paint(delta, still = false) {
-      ctx.fillStyle = still ? '#030405' : 'rgba(3, 4, 5, .19)';
+      ctx.fillStyle = still ? '#030a1e' : 'rgba(3, 10, 30, .19)';
       ctx.fillRect(0, 0, width, height);
       stars.forEach((star) => {
         const pulse = still || reduceMotion.matches ? .56 : .25 + (Math.sin(time * .001 + star.phase) + 1) * .34;
         ctx.globalAlpha = pulse;
-        ctx.fillStyle = '#f3f5f7';
+        ctx.fillStyle = '#eaf1ff';
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fill();
@@ -121,7 +121,7 @@
       ctx.save();
       ctx.translate(spider.x, spider.y);
       ctx.rotate(heading || Math.sin(t) * .1);
-      ctx.strokeStyle = 'rgba(248, 250, 255, .86)';
+      ctx.strokeStyle = 'rgba(180, 210, 255, .9)';
       ctx.fillStyle = 'rgba(255, 255, 255, .95)';
       ctx.lineWidth = 1.15;
       ctx.lineCap = 'round';
@@ -240,6 +240,83 @@
   function renderProjects() {
     const gallery = document.querySelector('#project-gallery');
     data.featuredProjects.forEach((project, index) => gallery.append(createProject(project, index)));
+    setupProjectFilter(gallery);
+    setupProjectTilt(gallery);
+  }
+
+  function setupProjectFilter(gallery) {
+    const bar = document.querySelector('#project-filter');
+    if (!bar) return;
+    const groups = [
+      ['todos', 'Todos', () => true],
+      ['live', 'Publicados', (p) => p.statusTone === 'status-live'],
+      ['client', 'Projectos para clientes', (p) => p.statusTone === 'status-client'],
+      ['progress', 'Em desenvolvimento', (p) => p.statusTone === 'status-progress'],
+      ['idea', 'Exploração', (p) => p.statusTone === 'status-idea']
+    ];
+    const items = [...gallery.querySelectorAll('.project-item')];
+    const byId = new Map(data.featuredProjects.map((project) => [project.id, project]));
+    groups.forEach(([key, label, test]) => {
+      const count = data.featuredProjects.filter(test).length;
+      if (!count) return;
+      const chip = el('button', 'filter-chip');
+      chip.type = 'button'; chip.dataset.filter = key;
+      chip.setAttribute('aria-pressed', key === 'todos' ? 'true' : 'false');
+      chip.append(document.createTextNode(label), el('small', '', String(count)));
+      bar.append(chip);
+    });
+    let current = 'todos', busy = false;
+    const ease = 'cubic-bezier(.2,.7,.2,1)';
+    function apply(key) {
+      if (busy || key === current) return;
+      busy = true; current = key;
+      bar.querySelectorAll('.filter-chip').forEach((chip) => chip.setAttribute('aria-pressed', String(chip.dataset.filter === key)));
+      const test = groups.find((group) => group[0] === key)[2];
+      const show = items.filter((item) => test(byId.get(item.dataset.projectId)));
+      const leaving = items.filter((item) => !show.includes(item) && !item.classList.contains('is-hidden'));
+      const animate = !reduceMotion.matches;
+      const fades = animate ? leaving.map((item) => item.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 180, fill: 'forwards' })) : [];
+      setTimeout(() => {
+        const first = new Map(items.filter((item) => !item.classList.contains('is-hidden') && !leaving.includes(item)).map((item) => [item, item.getBoundingClientRect()]));
+        gallery.style.minHeight = `${gallery.offsetHeight}px`;
+        fades.forEach((fade) => fade.cancel());
+        items.forEach((item) => item.classList.toggle('is-hidden', !show.includes(item)));
+        gallery.classList.toggle('is-filtered', key !== 'todos');
+        show.forEach((item) => item.classList.add('is-visible'));
+        if (animate) {
+          show.forEach((item, index) => {
+            const before = first.get(item);
+            if (before) {
+              const after = item.getBoundingClientRect();
+              const dx = before.left - after.left, dy = before.top - after.top;
+              if (dx || dy) item.animate([{ transform: `translate(${dx}px,${dy}px)` }, { transform: 'translate(0,0)' }], { duration: 640, easing: ease });
+            } else {
+              item.animate([{ opacity: 0, transform: 'translateY(32px) scale(.97)' }, { opacity: 1, transform: 'none' }], { duration: 560, delay: 100 + index * 70, easing: ease, fill: 'backwards' });
+            }
+          });
+        }
+        setTimeout(() => { gallery.style.minHeight = ''; busy = false; }, animate ? 720 : 0);
+      }, animate && fades.length ? 190 : 0);
+    }
+    listen(bar, 'click', (event) => {
+      const chip = event.target.closest('.filter-chip');
+      if (chip) apply(chip.dataset.filter);
+    });
+  }
+
+  function setupProjectTilt(gallery) {
+    if (reduceMotion.matches || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    gallery.querySelectorAll('.project-visual').forEach((visual) => {
+      visual.append(el('span', 'visual-glow'));
+      listen(visual, 'pointermove', (event) => {
+        const box = visual.getBoundingClientRect();
+        const x = (event.clientX - box.left) / box.width, y = (event.clientY - box.top) / box.height;
+        visual.style.setProperty('--mx', `${(x * 100).toFixed(1)}%`);
+        visual.style.setProperty('--my', `${(y * 100).toFixed(1)}%`);
+        visual.style.transform = `perspective(900px) rotateX(${((.5 - y) * 6).toFixed(2)}deg) rotateY(${((x - .5) * 8).toFixed(2)}deg)`;
+      });
+      listen(visual, 'pointerleave', () => { visual.style.transform = ''; });
+    });
   }
 
   function createProject(project, index) {
@@ -373,10 +450,22 @@
         const link = el('a', '', 'Verificar ↗'); link.href = certificate.verificationUrl; link.target = '_blank'; link.rel = 'noopener noreferrer'; item.append(link);
       }
       const meta = [certificate.issuer, certificate.date, certificate.credentialId].filter(Boolean).join(' · ');
-      item.append(el('p', '', meta));
+      if (meta) item.append(el('p', '', meta));
       if (certificate.description) item.append(el('p', '', certificate.description));
       if (certificate.skills?.length) item.append(makeTags(certificate.skills, 'project-tags'));
-      if (certificate.image) { const image = el('img'); image.src = certificate.image; image.alt = `Certificado: ${certificate.name}`; item.append(image); }
+      if (certificate.image) {
+        const preview = el('a', 'certificate-preview');
+        preview.href = certificate.image; preview.target = '_blank'; preview.rel = 'noopener noreferrer';
+        preview.setAttribute('aria-label', `Abrir imagem do certificado: ${certificate.name}`);
+        const image = el('img'); image.src = certificate.image; image.alt = `Certificado: ${certificate.name}`;
+        preview.append(image); item.append(preview);
+      }
+      if (certificate.file) {
+        const link = el('a', 'certificate-file', 'Abrir PDF ↗');
+        link.href = certificate.file; link.target = '_blank'; link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', `Abrir ${certificate.name} num novo separador`);
+        item.append(link);
+      }
       list.append(item);
     });
   }
@@ -440,8 +529,8 @@
     listen(document, 'keydown', (event) => { if (event.key === 'Escape') close(); });
     const sectionLinks = {
       inicio: '#sobre', sobre: '#sobre', experiencia: '#experiencia', projetos: '#projetos',
-      competencias: '#projetos', laboratorio: '#laboratorio', formacao: '#formacao',
-      processo: '#experiencia', presenca: '#projetos', contacto: '#contacto'
+      competencias: '#competencias', laboratorio: '#laboratorio', formacao: '#formacao',
+      processo: '#formacao', presenca: '#laboratorio', contacto: '#contacto'
     };
     const sections = [...document.querySelectorAll('main section[id]')];
     let frame = 0;
